@@ -19,6 +19,18 @@ img {
   height: 500px; /*todo important to set height here!*/
   object-fit: cover;
 }
+.fade {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+img:nth-of-type(even){
+  transform: translateX(50%);
+}
+img:nth-of-type(even).fade {
+  transform: translateX(0%);
+}
 
 h1 {
   text-align: center;
@@ -27,9 +39,4 @@ h1 {
 p {
   text-align: justify;
   margin: 25px 0px;
-}
-.fade {
-  transform: translateX(0%);
-  opacity: 1;
-  transition: all 1s ease;
 }
